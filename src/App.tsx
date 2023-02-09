@@ -1,32 +1,70 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-
-const Copyright: React.FC = () => {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-};
 
 const App: React.FC = () => {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Create React App example
-        </Typography>
-        <Copyright />
+    <Box
+      height='100vh'
+    >
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="100%"
+      >
+        <Box>
+          <Box>
+            <Typography
+              variant="title"
+            >
+              Title
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography
+              variant="subtitle1"
+            >
+          Subtitle 1
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography
+              variant="subtitle2"
+            >
+          Subtitle 2
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography
+              variant="bodyLarge"
+            >
+            Body Large
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography
+              variant="bodyMedium"
+            >
+            Body Medium
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography
+              variant="bodySmall"
+            >
+            Body Small
+            </Typography>
+          </Box>
+        </Box>
+
       </Box>
-    </Container>
+    </Box>
   );
 };
 

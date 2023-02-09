@@ -8996,6 +8996,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+typeface-tenor-sans@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-tenor-sans/-/typeface-tenor-sans-1.1.13.tgz#3aa9043ad6f5031e177408e57cf812892e439d95"
+  integrity sha512-Uyva7dymUMMAJj3VDo0M/g9fyzv/vA/ODizkOpyCzFLKMsFnDiaSc1ougTTrVMda4dVn68u4u/YXhGuhYSm4sQ==
+
 typescript@*:
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
