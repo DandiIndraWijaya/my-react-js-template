@@ -21,7 +21,11 @@ const Home: React.FC = () => {
           <Typography>Tag: </Typography>
           <br />
           <Tag variant='fill'>
-            <h4>dandi</h4>
+            <h4>Tag Fill</h4>
+          </Tag>
+          <br />
+          <Tag variant='border'>
+            <h4>Tag Border</h4>
           </Tag>
 
         </Box>
