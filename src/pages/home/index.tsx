@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Tag from '@components/Tag';
 
 const Home: React.FC = () => {
   return (
     <Box
-      height='100vh'
+      minHeight='100vh'
     >
       <Box
         display="flex"
@@ -14,55 +15,16 @@ const Home: React.FC = () => {
         height="100%"
       >
         <Box>
-          <Box>
-            <Typography
-              variant="title"
-            >
-              Title
-            </Typography>
-          </Box>
+          <Typography variant='h3' >Global Components</Typography>
+          <hr />
 
-          <Box>
-            <Typography
-              variant="subtitle1"
-            >
-          Subtitle 1
-            </Typography>
-          </Box>
+          <Typography>Tag: </Typography>
+          <br />
+          <Tag variant='fill'>
+            <h4>dandi</h4>
+          </Tag>
 
-          <Box>
-            <Typography
-              variant="subtitle2"
-            >
-          Subtitle 2
-            </Typography>
-          </Box>
-
-          <Box>
-            <Typography
-              variant="bodyLarge"
-            >
-            Body Large
-            </Typography>
-          </Box>
-
-          <Box>
-            <Typography
-              variant="bodyMedium"
-            >
-            Body Medium
-            </Typography>
-          </Box>
-
-          <Box>
-            <Typography
-              variant="bodySmall"
-            >
-            Body Small
-            </Typography>
-          </Box>
         </Box>
-
       </Box>
     </Box>
   );
