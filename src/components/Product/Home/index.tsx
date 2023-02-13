@@ -1,4 +1,3 @@
-import Love from '@components/Love';
 import currency from '@helpers/currency';
 import PropTypes from 'prop-types';
 import { Box, Typography } from '@mui/material';

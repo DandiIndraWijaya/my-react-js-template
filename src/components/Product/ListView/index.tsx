@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import Tag from '@components/Tag';
-import { currency, truncate } from '@helpers/index';
+import { currency } from '@helpers/index';
 import Rating from '@components/Rating';
 import Love from '@components/Love';
 

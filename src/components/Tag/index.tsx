@@ -66,7 +66,8 @@ Tag.propTypes = {
   borderRadius: PropTypes.string,
   padding: PropTypes.string,
   width: PropTypes.string,
-  height: PropTypes.string
+  height: PropTypes.string,
+  children: PropTypes.element.isRequired
 };
 
 export default Tag;

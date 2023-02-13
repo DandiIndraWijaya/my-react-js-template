@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { ProductGridView, ProductListView } from '@components/Product';
 import ProductHomePage from '@components/Product/Home';
+import Layout from '@components/Layout';
 
 const Home: React.FC = () => {
   const products = [
@@ -69,9 +70,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <Box
-      minHeight='100vh'
-    >
+    <Layout>
       <Box
         display="flex"
         justifyContent="center"
@@ -150,7 +149,7 @@ const Home: React.FC = () => {
           <br />
         </Box>
       </Box>
-    </Box>
+    </Layout>
   );
 };
 
