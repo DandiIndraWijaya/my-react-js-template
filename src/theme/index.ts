@@ -63,10 +63,10 @@ declare module '@mui/material/Typography' {
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#A8715A'
+      main: '#DD8560'
     },
     secondary: {
-      main: '#DD8560'
+      main: '#A8715A'
     },
     dark: '#252525',
     gray: '#878787',

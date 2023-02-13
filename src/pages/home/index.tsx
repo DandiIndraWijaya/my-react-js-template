@@ -1,9 +1,30 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Tag from '@components/Tag';
+import { ProductGridView, ProductListView } from '@components/Product';
 
 const Home: React.FC = () => {
+  const products = [
+    {
+      name: 'LAMEREI',
+      description: 'Recycle Boucle Knit Cardigan Pink',
+      price: 120,
+      rating: 4.8,
+      size: ['S', 'M', 'L'],
+      image: '/images/product_listview.png',
+      isLiked: false
+    },
+    {
+      name: '21WN',
+      description: 'reversible angora cardigan',
+      price: 120,
+      rating: 4.8,
+      size: ['S', 'M', 'L'],
+      image: '/images/product_listview.png',
+      isLiked: true
+    }
+  ];
+
   return (
     <Box
       minHeight='100vh'
@@ -18,15 +39,32 @@ const Home: React.FC = () => {
           <Typography variant='h3' >Global Components</Typography>
           <hr />
 
-          <Typography>Tag: </Typography>
+          <Typography>Product: </Typography>
           <br />
-          <Tag variant='fill'>
-            <h4>Tag Fill</h4>
-          </Tag>
+          <Typography>Product List View</Typography>
+          <Box height={10} />
+          {
+            products.map((product, key) => {
+              return (
+                <>
+                  <ProductListView
+                    key={key}
+                    name={product.name}
+                    description={product.description}
+                    price={product.price}
+                    rating={product.rating}
+                    image={product.image}
+                    size={product.size}
+                    isLiked={product.isLiked}
+                  />
+                  <Box height={10} />
+                </>
+              );
+            })
+          }
+
           <br />
-          <Tag variant='border'>
-            <h4>Tag Border</h4>
-          </Tag>
+          <ProductGridView />
 
         </Box>
       </Box>
