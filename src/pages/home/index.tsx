@@ -25,6 +25,27 @@ const Home: React.FC = () => {
     }
   ];
 
+  const productsGridView = [
+    {
+      name: 'LAMEREI',
+      description: 'Recycle Boucle Knit Cardigan Pink',
+      price: 120,
+      rating: 4.8,
+      size: ['S', 'M', 'L'],
+      image: '/images/product_gridview.png',
+      isLiked: false
+    },
+    {
+      name: '21WN',
+      description: 'reversible angora cardigan',
+      price: 120,
+      rating: 4.8,
+      size: ['S', 'M', 'L'],
+      image: '/images/product_gridview.png',
+      isLiked: true
+    }
+  ];
+
   return (
     <Box
       minHeight='100vh'
@@ -64,8 +85,27 @@ const Home: React.FC = () => {
           }
 
           <br />
-          <ProductGridView />
-
+          <Typography>Product Grid View</Typography>
+          <Box height={10} />
+          {
+            productsGridView.map((product, key) => {
+              return (
+                <>
+                  <ProductGridView
+                    key={key}
+                    name={product.name}
+                    description={product.description}
+                    price={product.price}
+                    rating={product.rating}
+                    image={product.image}
+                    isLiked={product.isLiked}
+                  />
+                  <Box height={20} />
+                </>
+              );
+            })
+          }
+          <br />
         </Box>
       </Box>
     </Box>

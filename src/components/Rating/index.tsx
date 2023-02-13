@@ -16,7 +16,7 @@ const Rating: React.FC<Props> = ({ rate }: Props) => {
         marginLeft="4px"
         fontSize="14px"
         color="grayLabel">
-        {rate}
+        {rate} Ratings
       </Typography>
     </Box>
   );
