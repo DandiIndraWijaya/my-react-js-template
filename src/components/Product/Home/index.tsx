@@ -9,46 +9,35 @@ interface Props {
   description: string
   price: number
   image: string
-  isLiked: boolean
 }
 
-const ProductGridView: React.FC<Props> = ({
+const ProductHomePage: React.FC<Props> = ({
   name,
   description,
   price,
-  image,
-  isLiked
+  image
 }: Props) => {
   return (
-    <Box width="165px" position="relative" >
+    <Box width="165px" textAlign="center" >
       <Box
         component="img"
         src={image}
         width="165px"
-        height="220px"
+        height="200px"
       />
-      <Box position="absolute" top="189px" right="9px">
-        <Love isLiked={isLiked} />
-      </Box>
       <Box>
-        <Typography variant='bodySmall' color="black">{name}</Typography>
-      </Box>
-      <Box
-        whiteSpace="nowrap"
-        overflow="hidden"
-        textOverflow= "ellipsis"
-      >
         <Typography
           variant='bodySmall'
-          color="grayLabel"
+          color="black"
         >
-          {description}
+          {`${name} ${description}`}
         </Typography>
       </Box>
       <Box>
         <Typography
           color="primary"
           fontSize="15px"
+          marginTop="5px"
         >
           {currency(price)}
         </Typography>
@@ -57,12 +46,11 @@ const ProductGridView: React.FC<Props> = ({
   );
 };
 
-ProductGridView.propTypes = {
+ProductHomePage.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
-  isLiked: PropTypes.bool.isRequired
+  image: PropTypes.string.isRequired
 };
 
-export default ProductGridView;
+export default ProductHomePage;
