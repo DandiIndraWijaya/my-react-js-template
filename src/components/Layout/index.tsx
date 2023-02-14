@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container } from '@mui/material';
 import PropTypes from 'prop-types';
 import Header from './Header';
+import Footer from './Footer';
 
 interface Props {
   children: React.ReactNode
@@ -14,6 +15,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
       <Container sx={{ backgroundColor: '#D6D6D6' }}>
         {children}
       </Container>
+      <Footer />
     </Box>
   );
 };
