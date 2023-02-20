@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
-import { Box, Button as MuiButton } from '@mui/material';
+import { Button as MuiButton } from '@mui/material';
 import PropTypes from 'prop-types';
 
 interface Props {
   variant?: string
   size?: string
+  borderRadius?: string
   children: React.ReactNode
   onClick?: () => void
 }
@@ -14,7 +15,8 @@ const Button: React.FC<Props> = ({
   children,
   size,
   variant,
-  onClick
+  onClick,
+  borderRadius
 }: Props) => {
   let padding = '8px 30px';
 
@@ -35,7 +37,7 @@ const Button: React.FC<Props> = ({
           padding,
           backgroundColor: 'inherit',
           textTransform: 'none',
-          borderRadius: '0',
+          borderRadius,
           border: '1px solid #DEDEDE',
           '&:hover': {
             backgroundColor: 'grayBorder'
@@ -55,7 +57,7 @@ const Button: React.FC<Props> = ({
         padding,
         backgroundColor: 'black',
         textTransform: 'none',
-        borderRadius: '0',
+        borderRadius,
         '&:hover': {
           backgroundColor: 'grayBody'
         }
@@ -69,14 +71,16 @@ const Button: React.FC<Props> = ({
 Button.defaultProps = {
   variant: 'contained',
   size: 'small',
-  onClick: () => {}
+  onClick: () => {},
+  borderRadius: '0'
 };
 
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
   variant: PropTypes.oneOf(['contained', 'outlined']),
   children: PropTypes.element.isRequired,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  borderRadius: PropTypes.string
 };
 
 export default Button;

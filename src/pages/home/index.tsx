@@ -2,7 +2,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Layout from '@components/Layout';
-import Button from '@components/Button';
+import Cart from '@components/Cart';
 
 const Home: React.FC = () => {
   return (
@@ -17,7 +17,13 @@ const Home: React.FC = () => {
           <Typography variant='h3' >Global Components</Typography>
           <hr />
           <br />
-          <Button >Button</Button>
+          <Cart
+            name="LAMEREI"
+            description='Recycle Boucle Knit Cardigan Pink'
+            price={120}
+            quantity={3}
+            image="/images/product_gridview.png"
+          />
           <br />
         </Box>
       </Box>
