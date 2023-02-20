@@ -10,9 +10,9 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }: Props) => {
   return (
-    <Box minHeight='100vh'>
+    <Box>
       <Header />
-      <Container sx={{ backgroundColor: '#D6D6D6' }}>
+      <Container sx={{ minHeight: '100vh' }}>
         {children}
       </Container>
       <Footer />
